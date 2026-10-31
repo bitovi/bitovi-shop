@@ -4,3 +4,7 @@ backend/database/todos.db
 .DS_Store
 .env
 !.claude/settings.local.json
+# Derived index, rebuilt from rules/*.yml by build.mjs
+design-rules/rules.db
+demo-artifacts/
+.playwright-mcp/

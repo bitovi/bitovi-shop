@@ -7,18 +7,17 @@ const instance = figma.selectedInstance
 
 // The Figma Button encodes both variant and disabled state in one "Variant" property.
 // Two getEnum calls split it into the two separate code props.
-// Note: Figma has typos — "Accen Disabled" and "Erro Disabled" are intentional here.
 const variant = instance.getEnum('Variant', {
   'Default': 'default',
   'Default Disabled': 'default',
   'Primary': 'primary',
   'Primary Disabled': 'primary',
   'Accent': 'accent',
-  'Accen Disabled': 'accent',
+  'Accent Disabled': 'accent',
   'Success': 'success',
   'Success Disabled': 'success',
   'Error': 'error',
-  'Erro Disabled': 'error',
+  'Error Disabled': 'error',
 })
 
 const disabled = instance.getEnum('Variant', {
@@ -27,11 +26,11 @@ const disabled = instance.getEnum('Variant', {
   'Primary': false,
   'Primary Disabled': true,
   'Accent': false,
-  'Accen Disabled': true,
+  'Accent Disabled': true,
   'Success': false,
   'Success Disabled': true,
   'Error': false,
-  'Erro Disabled': true,
+  'Error Disabled': true,
 })
 
 const textNode = instance.findText('Text')

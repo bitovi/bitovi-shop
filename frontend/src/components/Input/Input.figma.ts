@@ -6,14 +6,15 @@ import figma from 'figma'
 
 const instance = figma.selectedInstance
 
-const label = instance.getString('Label')
+const showLabel = instance.getBoolean('Show Label')
+const label = showLabel ? instance.getString('Label') : undefined
+const value = instance.getString('Value')
 const placeholder = instance.getString('Placeholder')
-// The Figma design only uses the Search icon variant; iconVariant is omitted when Show Icon is false.
-const showIcon = instance.getBoolean('Show Icon')
-const iconProp = showIcon ? figma.helpers.react.renderProp('iconVariant', 'search') : null
+// The design only ever uses the Search icon in this field.
+const iconVariant = instance.getBoolean('Show Icon') ? 'search' : undefined
 
 export default {
-  example: figma.code`<Input${figma.helpers.react.renderProp('label', label)}${figma.helpers.react.renderProp('placeholder', placeholder)}${iconProp} />`,
+  example: figma.code`<Input${figma.helpers.react.renderProp('label', label)}${figma.helpers.react.renderProp('value', value)}${figma.helpers.react.renderProp('placeholder', placeholder)}${figma.helpers.react.renderProp('iconVariant', iconVariant)} />`,
   imports: ['import Input from "components/Input/Input"'],
   id: 'input',
   metadata: { nestable: false },

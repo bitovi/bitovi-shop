@@ -5,12 +5,12 @@ import figma from 'figma'
 
 const instance = figma.selectedInstance
 
-// Note: Figma has typos in two variant names — "Priamry Ghost" and "Succes Ghost".
+// Note: Figma still has a typo in one variant name, "Succes Ghost". Match it exactly.
 const variant = instance.getEnum('Variant', {
   'Default': 'default',
   'Default Ghost': 'default-ghost',
   'Primary': 'primary',
-  'Priamry Ghost': 'primary-ghost',
+  'Primary Ghost': 'primary-ghost',
   'Accent': 'accent',
   'Accent Ghost': 'accent-ghost',
   'Success': 'success',
