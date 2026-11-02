@@ -39,7 +39,7 @@ When someone starts the workshop:
    ```
 
    It checks the install, builds the rules index, and creates a
-   `workshop/<date>` branch so nothing they do touches `ai-enablement`. If it
+   `workshop/<date>` branch so nothing they do touches the branch they started on (usually `main`). If it
    reports a problem, fix it or tell them what's needed.
 
 2. **Check the connections.** Call Figma's `whoami` and the design-rules
@@ -113,7 +113,7 @@ human checkpoints are half of what the workshop teaches.
 2. **Answer the parked questions.**
 3. **Cleanup, asking first for each:**
    - The workshop branch: `workshop.mjs finish` switches back to
-     `ai-enablement`. Ask before deleting the branch; they may want to keep
+     the branch they started on. Ask before deleting the branch; they may want to keep
      what they built.
    - Figma: the frames they made on the `Workshop` page of the Shop file.
      Ask whether to delete them. Never touch any other page.

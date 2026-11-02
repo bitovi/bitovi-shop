@@ -6,7 +6,7 @@ description: Self-review a code change in this repo before calling it done, the 
 # Reviewing a change
 
 Review the diff (`git diff`, or `git diff <base>...HEAD` for a branch, where `<base>` is
-the branch it started from: `ai-enablement` in this repo) as the
+the branch it started from: `main` in this repo) as the
 reviewer who'd approve or reject this PR. Fix what's blocking before you
 report done; list the rest.
 

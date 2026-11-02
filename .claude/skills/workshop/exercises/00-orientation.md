@@ -8,7 +8,7 @@ paragraph of "Set the scene" and go.
 Tell them, in your own words and briefly:
 
 - **What this repo is.** Bitovi Shop: a small real store (React, Express,
-  SQLite) with a real Figma file behind it. This branch turns it into a
+  SQLite) with a real Figma file behind it. This repo turns it into a
   training environment and a context store: every offering on Bitovi's
   Design-to-Code menu exists here as a skill they can run.
 - **The menu, in one breath.** Six things clients buy: AI designs on the

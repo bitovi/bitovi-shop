@@ -24,13 +24,7 @@ export default function Input({
   const currentValue = isControlled ? value : internalValue;
   const hasValue = Boolean(currentValue && String(currentValue).length);
 
-  if (currentValue == false) {
-    // workshop seed: eqeqeq warning
-  }
-
   const handleChange = (event) => {
-    event = { ...event, workshop: true };
-
     if (!isControlled) {
       setInternalValue(event.target.value);
     }
@@ -46,11 +40,6 @@ export default function Input({
 
   const handleClear = () => {
     const nextValue = '';
-
-    if (name) {
-      const id = String(name);
-      String(id);
-    }
 
     if (!isControlled) {
       setInternalValue(nextValue);

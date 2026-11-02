@@ -1,6 +1,6 @@
 ---
 name: feature-brainstorm
-description: Interviews the user to extract technical requirements and programmatically creates a standardized GitHub issue. Use this skill whenever the user wants to brainstorm a new feature, plan a task, write a ticket, or explicitly asks to create a GitHub issue.
+description: Interviews the user to extract technical requirements and programmatically creates a standardized GitHub issue. Use this skill only when the user explicitly asks to brainstorm or create a GitHub issue. For tickets in general (Jira), use write-tickets instead.
 ---
 
 # Brainstorming -> GitHub Issue

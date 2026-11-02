@@ -9,16 +9,10 @@
     "frontend": "node shared/scripts/kill-port.js 5173 && vite --config frontend/vite.config.js --host",
     "mcp:sql": "node backend/mcps/sql/index.js",
     "mcp:shop": "node backend/mcps/shop/index.js",
-    "mcp:playwright": "node shared/scripts/run-playwright-mcp.js",
     "build": "npm run build:frontend",
+    "test": "vitest run --config frontend/vite.config.js",
+    "test:watch": "vitest --config frontend/vite.config.js",
     "build:frontend": "vite build --config frontend/vite.config.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "e2e:install": "node shared/scripts/run-playwright-e2e.js --install-only",
-    "test:e2e": "node shared/scripts/run-playwright-e2e.js",
-    "test:e2e:list": "node shared/scripts/run-playwright-e2e.js --list",
     "figma:publish": "figma connect publish",
     "figma:unpublish": "figma connect unpublish",
     "figma:parse": "figma connect parse",
@@ -40,9 +34,6 @@
     "yaml": "^2.9.1"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@playwright/mcp": "0.0.76",
-    "@playwright/test": "1.61.1",
     "@figma/code-connect": "^1.4.9",
     "@testing-library/dom": "^9.3.4",
     "@testing-library/jest-dom": "^6.9.1",
@@ -50,12 +41,9 @@
     "@testing-library/user-event": "^14.6.7",
     "@vitejs/plugin-react": "^4.3.4",
     "concurrently": "^8.2.2",
-    "eslint": "^10.5.0",
-    "globals": "^17.7.0",
     "jsdom": "^22.1.0",
-    "supertest": "^7.2.2",
     "vite": "^4.5.14",
-    "vitest": "^4.1.9"
+    "vitest": "^0.34.6"
   },
   "engines": {
     "node": "24.4.1",

@@ -11,7 +11,7 @@ the prompt, and the Figma design it uses.
 
 ## Before you start
 
-- The `ai-enablement` branch, in a Codespace or locally with `npm install`
+- This repo on `main`, in a Codespace or locally with `npm install`
 - `/mcp` in Claude Code, signed in to Figma and Atlassian
 - The [Shop Figma file](https://www.figma.com/design/v6L5bcFuh035HNwdjqy6GN/Shop) open
 - Jira project FD, [Feature Development](https://bitovi.atlassian.net/jira/software/projects/FD/boards/958)
@@ -45,5 +45,5 @@ rerun from a clean state.
 
 Everything happens on a `workshop/<date>` branch, the `Workshop` page in the
 Figma file, and project FD in Jira. At the end the agent switches back to
-`ai-enablement` and asks before deleting anything. Tickets are left for you
+the branch you started on and asks before deleting anything. Tickets are left for you
 to keep or delete.

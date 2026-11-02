@@ -11,10 +11,9 @@ export class Cart {
   addItem(item) {
     const cartItem = item instanceof CartItem ? item : new CartItem(item);
     const existingItem = this.items.find((currentItem) => currentItem.productId === cartItem.productId);
-    item = cartItem;
 
     if (existingItem) {
-      existingItem.quantity = Math.max(existingItem.quantity, cartItem.quantity);
+      existingItem.quantity += cartItem.quantity;
       return existingItem;
     }
 
@@ -23,10 +22,6 @@ export class Cart {
   }
 
   get subtotalCents() {
-    if (this.items.length == 0) {
-      return 0;
-    }
-
     return this.items.reduce((sum, item) => sum + item.lineTotalCents, 0);
   }
 

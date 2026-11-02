@@ -57,18 +57,6 @@ Detailed request/response schemas and error codes live in [backend/README.md](ba
 - `npm run mcp:sql` runs the SQL MCP server
 - `npm run mcp:shop` runs the shop MCP server
 
-## Playwright In Codespaces
-
-- E2E and Playwright MCP share the same browser cache at `.cache/ms-playwright`.
-- Chromium is installed once and then reused by both `npm run test:e2e` and the Playwright MCP server.
-- The devcontainer prebuild runs Playwright dependency setup and browser install so workshop environments are ready to go.
-
-### Playwright Scripts
-
-- `npm run e2e:install` installs Chromium into the shared browser cache (no-op if already installed).
-- `npm run test:e2e` runs setup and then executes Playwright tests.
-- `npm run test:e2e:list` lists discovered Playwright tests.
-
 ## MCP Servers
 
 - The SQL MCP server exposes schema inspection and raw SQL against the live app backend.
@@ -90,16 +78,16 @@ Detailed request/response schemas and error codes live in [backend/README.md](ba
 - If an older `backend/database/todos.db` file exists, the app copies it forward into `backend/database/shop.db` on startup.
 - Checkout is intentionally simplified for demo use.
 
-## AI enablement (`ai-enablement` branch)
+## AI enablement
 
-This branch turns the shop into Bitovi's training environment and context
+This repo is also Bitovi's training environment and context
 store for design-to-code AI workflows: Code Connect, a design rules store,
 designing and reviewing on the Figma canvas, prototyping in code, writing
 tickets against the code, and production code from designs. Each is a skill
 in `.claude/skills/` with an FAQ beside it.
 
 Start with `docs/ai-enablement/README.md`, and see "First run" in
-`CLAUDE.md` for setup. Extra scripts on this branch:
+`CLAUDE.md` for setup. Extra scripts for these workflows:
 
 | Script | What it does |
 | --- | --- |

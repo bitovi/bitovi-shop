@@ -112,7 +112,7 @@ The full checklist is on Confluence: [AI Codebase Enablement Checklist](https://
 
 ## What did it take to set this up in this repo?
 
-This repo is the worked example. Before this branch it had a 21-line
+This repo is the worked example. Before this work it had a 21-line
 `CLAUDE.md` about keeping changes small, no tests and no linter. Setting it
 up meant:
 
