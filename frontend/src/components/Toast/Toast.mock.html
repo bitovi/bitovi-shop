@@ -173,11 +173,26 @@ hr {
 }
 
 .added-to-cart-toast__label {
-  flex: 1;
   margin: 0;
+  font-size: 0.82rem;
+  font-weight: var(--font-weight-bold);
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+  line-height: 1;
+}
+
+.added-to-cart-toast__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.added-to-cart-toast__product-name {
+  margin: 4px 0 0;
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
   line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .added-to-cart-toast__icon {
@@ -196,7 +211,7 @@ hr {
 
 <section class="mock-state" data-state="added to cart">
 <h2>added to cart</h2>
-<div data-component="AddedToCartToast" data-state="added to cart" class="toast added-to-cart-toast" role="status" aria-label="Sunset Mug added to cart"><div class="added-to-cart-toast__thumb" aria-hidden="true"><div class="added-to-cart-toast__image-fallback"></div></div><p class="added-to-cart-toast__label">Added to cart</p><span class="icon icon--cart added-to-cart-toast__icon"><span class="icon__svg icon__svg--mask" style="--icon-mask-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzUiIHZpZXdCb3g9IjAgMCAzMyAzNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9IlZlY3RvciIgZD0iTTQuMTI1IDUuNjk0MzRINi44NzVMOS45IDIwLjY0MjNIMjQuNzVMMjcuNSA5Ljk2NTE3SDEwLjQ1IiBzdHJva2U9IiMyMzMxMzIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGlkPSJWZWN0b3JfMiIgZD0iTTEzLjc1IDI4LjQ3MjJDMTQuMTE0NyAyOC40NzIyIDE0LjQ2NDQgMjguMzIyMiAxNC43MjIzIDI4LjA1NTNDMTQuOTgwMSAyNy43ODgzIDE1LjEyNSAyNy40MjYyIDE1LjEyNSAyNy4wNDg2QzE1LjEyNSAyNi42NzEgMTQuOTgwMSAyNi4zMDg5IDE0LjcyMjMgMjYuMDQyQzE0LjQ2NDQgMjUuNzc1IDE0LjExNDcgMjUuNjI1IDEzLjc1IDI1LjYyNUMxMy4zODUzIDI1LjYyNSAxMy4wMzU2IDI1Ljc3NSAxMi43Nzc3IDI2LjA0MkMxMi41MTk5IDI2LjMwODkgMTIuMzc1IDI2LjY3MSAxMi4zNzUgMjcuMDQ4NkMxMi4zNzUgMjcuNDI2MiAxMi41MTk5IDI3Ljc4ODMgMTIuNzc3NyAyOC4wNTUzQzEzLjAzNTYgMjguMzIyMiAxMy4zODUzIDI4LjQ3MjIgMTMuNzUgMjguNDcyMloiIGZpbGw9IiMyMzMxMzIiLz4KPHBhdGggaWQ9IlZlY3Rvcl8zIiBkPSJNMjMuMzc1IDI4LjQ3MjJDMjMuNzM5NyAyOC40NzIyIDI0LjA4OTQgMjguMzIyMiAyNC4zNDczIDI4LjA1NTNDMjQuNjA1MSAyNy43ODgzIDI0Ljc1IDI3LjQyNjIgMjQuNzUgMjcuMDQ4NkMyNC43NSAyNi42NzEgMjQuNjA1MSAyNi4zMDg5IDI0LjM0NzMgMjYuMDQyQzI0LjA4OTQgMjUuNzc1IDIzLjczOTcgMjUuNjI1IDIzLjM3NSAyNS42MjVDMjMuMDEwMyAyNS42MjUgMjIuNjYwNiAyNS43NzUgMjIuNDAyNyAyNi4wNDJDMjIuMTQ0OSAyNi4zMDg5IDIyIDI2LjY3MSAyMiAyNy4wNDg2QzIyIDI3LjQyNjIgMjIuMTQ0OSAyNy43ODgzIDIyLjQwMjcgMjguMDU1M0MyMi42NjA2IDI4LjMyMjIgMjMuMDEwMyAyOC40NzIyIDIzLjM3NSAyOC40NzIyWiIgZmlsbD0iIzIzMzEzMiIvPgo8L3N2Zz4K)" aria-hidden="true"></span></span></div>
+<div data-component="AddedToCartToast" data-state="added to cart" class="toast added-to-cart-toast" role="status" aria-label="Sunset Mug added to cart" data-testid="added-to-cart-toast"><div class="added-to-cart-toast__thumb" aria-hidden="true"><div class="added-to-cart-toast__image-fallback" data-testid="added-to-cart-toast-image-fallback"></div></div><div class="added-to-cart-toast__content"><p class="added-to-cart-toast__label">Added to cart</p><p class="added-to-cart-toast__product-name" data-testid="added-to-cart-toast-product-name">Sunset Mug</p></div><span class="icon icon--cart added-to-cart-toast__icon"><span class="icon__svg icon__svg--mask" style="--icon-mask-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzUiIHZpZXdCb3g9IjAgMCAzMyAzNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9IlZlY3RvciIgZD0iTTQuMTI1IDUuNjk0MzRINi44NzVMOS45IDIwLjY0MjNIMjQuNzVMMjcuNSA5Ljk2NTE3SDEwLjQ1IiBzdHJva2U9IiMyMzMxMzIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGlkPSJWZWN0b3JfMiIgZD0iTTEzLjc1IDI4LjQ3MjJDMTQuMTE0NyAyOC40NzIyIDE0LjQ2NDQgMjguMzIyMiAxNC43MjIzIDI4LjA1NTNDMTQuOTgwMSAyNy43ODgzIDE1LjEyNSAyNy40MjYyIDE1LjEyNSAyNy4wNDg2QzE1LjEyNSAyNi42NzEgMTQuOTgwMSAyNi4zMDg5IDE0LjcyMjMgMjYuMDQyQzE0LjQ2NDQgMjUuNzc1IDE0LjExNDcgMjUuNjI1IDEzLjc1IDI1LjYyNUMxMy4zODUzIDI1LjYyNSAxMy4wMzU2IDI1Ljc3NSAxMi43Nzc3IDI2LjA0MkMxMi41MTk5IDI2LjMwODkgMTIuMzc1IDI2LjY3MSAxMi4zNzUgMjcuMDQ4NkMxMi4zNzUgMjcuNDI2MiAxMi41MTk5IDI3Ljc4ODMgMTIuNzc3NyAyOC4wNTUzQzEzLjAzNTYgMjguMzIyMiAxMy4zODUzIDI4LjQ3MjIgMTMuNzUgMjguNDcyMloiIGZpbGw9IiMyMzMxMzIiLz4KPHBhdGggaWQ9IlZlY3Rvcl8zIiBkPSJNMjMuMzc1IDI4LjQ3MjJDMjMuNzM5NyAyOC40NzIyIDI0LjA4OTQgMjguMzIyMiAyNC4zNDczIDI4LjA1NTNDMjQuNjA1MSAyNy43ODgzIDI0Ljc1IDI3LjQyNjIgMjQuNzUgMjcuMDQ4NkMyNC43NSAyNi42NzEgMjQuNjA1MSAyNi4zMDg5IDI0LjM0NzMgMjYuMDQyQzI0LjA4OTQgMjUuNzc1IDIzLjczOTcgMjUuNjI1IDIzLjM3NSAyNS42MjVDMjMuMDEwMyAyNS42MjUgMjIuNjYwNiAyNS43NzUgMjIuNDAyNyAyNi4wNDJDMjIuMTQ0OSAyNi4zMDg5IDIyIDI2LjY3MSAyMiAyNy4wNDg2QzIyIDI3LjQyNjIgMjIuMTQ0OSAyNy43ODgzIDIyLjQwMjcgMjguMDU1M0MyMi42NjA2IDI4LjMyMjIgMjMuMDEwMyAyOC40NzIyIDIzLjM3NSAyOC40NzIyWiIgZmlsbD0iIzIzMzEzMiIvPgo8L3N2Zz4K)" aria-hidden="true"></span></span></div>
 </section>
 </body>
 </html>
