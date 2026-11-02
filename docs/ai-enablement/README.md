@@ -1,6 +1,6 @@
 # AI enablement: design to code
 
-This branch (`ai-enablement`) is two things at once:
+This repo is two things at once:
 
 - **A training environment.** A real app, a real Figma file, and a working
   version of every workflow on Bitovi's Design-to-Code menu, so people can

@@ -1,19 +1,3 @@
-## Backend context and constraints
-
-### Runtime and data lifecycle
-- The backend defaults to host 127.0.0.1 in this repo; if host binding changes, re-check admin route expectations.
-- Database reset behavior is intentional here. Do not "fix" it by making demo state persistent unless requested.
-- Admin SQL endpoints exist for tooling and workshops. Disable them only when intentionally testing a locked-down mode.
-
-### Integration contracts
-- MCP tools depend on backend HTTP routes, not direct SQLite file access. Route behavior is the integration contract.
-- If route names or payload shapes change, update frontend and MCP clients in the same change.
-- Product images are expected to work as data URIs in API payloads and storage.
-
-### API and money conventions
-- Keep the common response envelope stable (`ok` plus error codes) because tooling depends on it.
-- Keep money values in cents through DB and API layers, and convert to display units only at presentation time.
-
 # Backend
 
 Express API on port 3001, mounted under `/api` in `index.js`. SQLite through
@@ -38,8 +22,20 @@ res.status(404).json({ ok: false, error: { message, code } });   // failure
 
 Every route wraps its body in `try`/`catch` and returns a 500 with
 `{ ok: false, error: { message, code } }` on an unexpected error. Codes are
-UPPER_SNAKE_CASE (`PRODUCTS_FETCH_ERROR`). The frontend depends on `ok` and
-`error.message`, so new routes follow the same shape.
+UPPER_SNAKE_CASE (`PRODUCTS_FETCH_ERROR`). The frontend and the MCP tools
+depend on `ok` and `error.message`, so new routes follow the same shape.
+
+## Runtime and data lifecycle
+
+- The backend defaults to host 127.0.0.1 in this repo; if host binding changes, re-check admin route expectations.
+- Database reset behavior is intentional here. Do not "fix" it by making demo state persistent unless requested.
+- Admin SQL endpoints exist for tooling and workshops. Disable them only when intentionally testing a locked-down mode.
+
+## Integration contracts
+
+- MCP tools depend on backend HTTP routes, not direct SQLite file access. Route behavior is the integration contract.
+- If route names or payload shapes change, update frontend and MCP clients in the same change.
+- Product images are expected to work as data URIs in API payloads and storage.
 
 ## Watch out for
 
@@ -47,7 +43,9 @@ UPPER_SNAKE_CASE (`PRODUCTS_FETCH_ERROR`). The frontend depends on `ok` and
   (`getAllProducts`) has no reviews or ratings; only `GET /api/products/:id`
   (`getProductById`) does. A design that shows ratings on a product list needs
   a backend change first.
-- **Prices are integer cents** (`price_cents`). Never store or return dollars.
+- **Prices are integer cents** (`price_cents`) through the DB and API layers.
+  Never store or return dollars; convert to display units only at presentation
+  time.
 - **Admin SQL routes** (`routes/admin.js`) are on by default; set
   `ENABLE_ADMIN_SQL=false` to turn them off.
 - A schema change is its own piece of work: discuss it, don't slip it into a UI

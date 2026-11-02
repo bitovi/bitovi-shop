@@ -232,4 +232,4 @@ the clock starts.
 Every row has a training twin that runs in **this repo** instead of the
 client's: a couple of hours, the same content for every client, no prep. Play
 with the workflow here, then we do it in yours. It's the cheapest way in the
-door. The skills, FAQs and worked examples in this branch are that material.
+door. The skills, FAQs and worked examples in this repo are that material.

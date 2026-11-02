@@ -116,7 +116,7 @@ logic in a mock, you picked the wrong mode.** Stop and switch.
 **App mode:**
 
 1. Branch `prototype/<name>` from the base branch (the branch you're on,
-   `ai-enablement` in this repo; on a client repo, their main branch).
+   `main` in this repo; on a client repo, their main branch).
 2. Build in `frontend/src/prototypes/<name>/`: page components that import
    the real shared components, and a `fixtures.js` with fake data. Follow
    `code-build-component` for how UI is written here.

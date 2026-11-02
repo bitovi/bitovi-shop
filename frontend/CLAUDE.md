@@ -7,7 +7,7 @@
 ### UX and styling
 - Keep UI behavior obvious. Avoid hidden auto-actions that are hard to explain.
 - Stick to the current styling approach: plain CSS files next to components.
-- Prefer existing CSS variables for colors and spacing. Use one-off values only when needed.
+- Use design tokens only: colors, spacing, radius and type come from the CSS variables in `src/styles.css`. No raw hex values or hand-picked pixel spacing.
 
 ### Contracts and dependencies
 - Reuse types and data shapes from `shared/` instead of redefining them in frontend files.

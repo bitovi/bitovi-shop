@@ -45,7 +45,7 @@ because it already speaks code. Everything after this step is the same.
   `frontend/src/pages/CLAUDE.md`.
 - **An app prototype** (on a `prototype/<name>` branch): see what it touched
   with `git diff <base>...prototype/<name>`, where `<base>` is the branch it
-  came from (`ai-enablement` here). **Never merge or build on the prototype
+  came from (`main` here). **Never merge or build on the prototype
   branch.** Start a fresh branch from the base branch and use the prototype
   as a reference: move code from `frontend/src/prototypes/` to where it
   belongs under `pages/` and `components/`, replace `fixtures.js` with real

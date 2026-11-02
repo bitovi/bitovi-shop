@@ -78,16 +78,16 @@ Detailed request/response schemas and error codes live in [backend/README.md](ba
 - If an older `backend/database/todos.db` file exists, the app copies it forward into `backend/database/shop.db` on startup.
 - Checkout is intentionally simplified for demo use.
 
-## AI enablement (`ai-enablement` branch)
+## AI enablement
 
-This branch turns the shop into Bitovi's training environment and context
+This repo is also Bitovi's training environment and context
 store for design-to-code AI workflows: Code Connect, a design rules store,
 designing and reviewing on the Figma canvas, prototyping in code, writing
 tickets against the code, and production code from designs. Each is a skill
 in `.claude/skills/` with an FAQ beside it.
 
 Start with `docs/ai-enablement/README.md`, and see "First run" in
-`CLAUDE.md` for setup. Extra scripts on this branch:
+`CLAUDE.md` for setup. Extra scripts for these workflows:
 
 | Script | What it does |
 | --- | --- |

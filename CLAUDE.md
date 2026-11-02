@@ -1,6 +1,13 @@
-## Scope
+# Bitovi Shop
 
-Include only guidance that is invisible to code: human preferences, historical baggage, negative constraints, and decision rationale.
+A small ecommerce app (catalog, product page, cart, checkout, orders) used by
+Bitovi to teach and demonstrate AI enablement, especially design to code.
+
+This repo is both a **training environment** and a
+**context store**: every workflow on Bitovi's Design-to-Code menu exists here
+as a skill, with an FAQ explaining the reasoning, and `docs/ai-enablement/`
+holds what we sell and how we deliver it. Start with
+`docs/ai-enablement/README.md`.
 
 ## Project context and constraints
 
@@ -17,21 +24,11 @@ Include only guidance that is invisible to code: human preferences, historical b
 - A clean start experience (`npm install` then `npm start`) is treated as a core quality bar for this repo.
 - Demo behavior should stay deterministic and easy to reset between runs.
 
-## Scoped context files
+### Scoped context files
 - Backend rules: `backend/CLAUDE.md`
-- Frontend rules: `frontend/CLAUDE.md`
+- Frontend rules: `frontend/CLAUDE.md`, plus `frontend/src/components/CLAUDE.md`
+  and `frontend/src/pages/CLAUDE.md`
 - Shared rules: `shared/CLAUDE.md`
-
-# Bitovi Shop
-
-A small ecommerce app (catalog, product page, cart, checkout, orders) used by
-Bitovi to teach and demonstrate AI enablement, especially design to code.
-
-This branch (`ai-enablement`) is both a **training environment** and a
-**context store**: every workflow on Bitovi's Design-to-Code menu exists here
-as a skill, with an FAQ explaining the reasoning, and `docs/ai-enablement/`
-holds what we sell and how we deliver it. Start with
-`docs/ai-enablement/README.md`.
 
 ## How to help here
 
@@ -114,7 +111,7 @@ them fails, and say so plainly if you couldn't run one.
 1. `npm test` (Vitest and React Testing Library)
 2. `npm run build`
 3. `npm run mocks:check` (if you touched a component, `npm run mocks:build` first)
-4. `npm run figma:check` (on this branch it fails on `Card` and `Rating` on
+4. `npm run figma:check` (it fails on `Card` and `Rating` on
    purpose, as a training demo; any other failure is yours)
 5. For UI work, look at it: run the app and screenshot the change, and compare
    against the Figma frame when there is one.
@@ -149,3 +146,15 @@ a skill. The `code-*` skills are explained together in `design-to-code/FAQ.md`
 | `code-commit` | Commit messages and branches |
 | `scope-engagement` | Scope a client engagement from what they said |
 | `workshop` | The guided, one-hour hands-on workshop through every workflow |
+
+Other skills here work from GitHub instead of Jira (`feature-brainstorm`,
+`feature-implement`, `feature-review`, `github-issue`, `github-pr`), and
+`detect-fraudulent-reviews` analyses `notes/product-reviews.csv`. When someone
+asks for a ticket, use `write-tickets` (Jira); use the GitHub skills only when
+they ask for a GitHub issue.
+
+## Editing this file
+
+Add only guidance that is invisible to code: human preferences, historical
+baggage, negative constraints, and decision rationale. Anything an agent can
+learn by reading the code doesn't belong here.
