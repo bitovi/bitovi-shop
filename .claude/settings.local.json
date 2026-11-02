@@ -1,5 +1,9 @@
 {
   "enabledMcpjsonServers": [
-    "shop"
+    "shop",
+    "playwright",
+    "design-rules",
+    "figma",
+    "atlassian"
   ]
 }
