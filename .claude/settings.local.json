@@ -2,6 +2,9 @@
   "enabledMcpjsonServers": [
     "shop",
     "sql",
-    "playwright_mcp"
+    "playwright_mcp",
+    "design-rules",
+    "figma",
+    "atlassian"
   ]
 }

@@ -104,6 +104,7 @@ Start with `docs/ai-enablement/README.md`, and see "First run" in
 | Script | What it does |
 | --- | --- |
 | `npm test` | Vitest and React Testing Library |
+| `npm run lint` / `lint:fix` | ESLint (warnings only) / apply its automatic fixes |
 | `npm run figma:check` / `figma:publish` | Code Connect coverage check / publish mappings |
 | `npm run mocks:build` / `mocks:check` / `mocks:bundle` | Generated HTML mocks of components, for prototypes |
 | `npm run prototype:share` | Public URL for the app in a GitHub Codespace |
