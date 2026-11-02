@@ -2,12 +2,23 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
-    include: [
-      'backend/**/*.test.js',
-      'frontend/src/**/*.test.js',
-      'shared/**/*.test.js',
+    projects: [
+      {
+        extends: './frontend/vite.config.js',
+        root: './frontend',
+        test: {
+          name: 'frontend',
+          clearMocks: true,
+        },
+      },
+      {
+        test: {
+          name: 'backend-shared',
+          include: ['backend/**/*.test.js', 'shared/**/*.test.js'],
+          environment: 'node',
+          clearMocks: true,
+        },
+      },
     ],
-    environment: 'node',
-    clearMocks: true,
   },
 });

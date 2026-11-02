@@ -18,23 +18,41 @@
     "test:watch": "vitest",
     "e2e:install": "node shared/scripts/run-playwright-e2e.js --install-only",
     "test:e2e": "node shared/scripts/run-playwright-e2e.js",
-    "test:e2e:list": "node shared/scripts/run-playwright-e2e.js --list"
+    "test:e2e:list": "node shared/scripts/run-playwright-e2e.js --list",
+    "figma:publish": "figma connect publish",
+    "figma:unpublish": "figma connect unpublish",
+    "figma:parse": "figma connect parse",
+    "figma:check": "node shared/scripts/check-code-connect.js",
+    "mocks:build": "node shared/scripts/mocks.js build",
+    "mocks:check": "node shared/scripts/mocks.js check",
+    "mocks:bundle": "node shared/scripts/mocks.js bundle",
+    "prototype:share": "node shared/scripts/share-prototype.js",
+    "mcp:design-rules": "node backend/mcps/design-rules/index.js",
+    "rules:build": "node design-rules/build.mjs",
+    "rules:approve": "node design-rules/approve.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
     "express": "^4.21.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sql.js": "^1.13.0"
+    "sql.js": "^1.13.0",
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@playwright/mcp": "0.0.76",
     "@playwright/test": "1.61.1",
+    "@figma/code-connect": "^1.4.9",
+    "@testing-library/dom": "^9.3.4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^14.3.1",
+    "@testing-library/user-event": "^14.6.7",
     "@vitejs/plugin-react": "^4.3.4",
     "concurrently": "^8.2.2",
     "eslint": "^10.5.0",
     "globals": "^17.7.0",
+    "jsdom": "^22.1.0",
     "supertest": "^7.2.2",
     "vite": "^4.5.14",
     "vitest": "^4.1.9"

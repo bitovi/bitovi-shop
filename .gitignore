@@ -2,6 +2,7 @@ node_modules/
 frontend/dist/
 backend/database/todos.db
 .DS_Store
+.env
 !.claude/settings.local.json
 .cache/
 .playwright-mcp/
@@ -11,3 +12,6 @@ debug-screenshots/**/*.png
 debug-screenshots/**/*.jpg
 debug-screenshots/**/*.jpeg
 debug-screenshots/**/*.webp
+# Derived index, rebuilt from rules/*.yml by build.mjs
+design-rules/rules.db
+demo-artifacts/

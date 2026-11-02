@@ -7,6 +7,12 @@ export default [
   },
   js.configs.recommended,
   {
+    files: ['frontend/src/**/*.test.jsx'],
+    languageOptions: {
+      globals: globals.vitest,
+    },
+  },
+  {
     files: ['**/*.{js,jsx,mjs,cjs}'],
     languageOptions: {
       ecmaVersion: 'latest',
